@@ -94,7 +94,7 @@ app.get(
       collection: 'user'
     };
 
-    const token = jwt.sign(fieldToSign, process.env.PAYLOAD_SECRET, {
+    const token = jwt.sign(fieldToSign, payload.secret, {
       expiresIn: collectionConfig.auth.tokenExpiration
     });
 
